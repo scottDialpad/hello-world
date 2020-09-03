@@ -19,7 +19,7 @@
        docker: 
          - image: circleci/ruby:2.4.1
        steps:
-         - run: "Hello World! Scotty did this!"
+         - run: echo "Hello World! Scotty did this!"
    
  # Under the workflows: map, we can coordinate our two jobs, defined above.
  workflows:

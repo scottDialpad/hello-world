@@ -15,6 +15,12 @@
        - checkout
        - run: echo "A more familiar hi" # We run a similar echo command to above.
        - run: sleep 15 # and then sleep for 15 seconds.
+   three: # Scott's new Job
+       docker: 
+         - image: circleci/ruby:2.4.1
+       steps:
+         - run "Hello World! Scotty did this!"
+   
  # Under the workflows: map, we can coordinate our two jobs, defined above.
  workflows:
    version: 2
@@ -22,3 +28,4 @@
      jobs: # and here we list the jobs we are going to run.
        - one
        - two
+       - three
